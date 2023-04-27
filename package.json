@@ -1,0 +1,38 @@
+{
+  "name": "migration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/scriptFaker.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon",
+    "start": "npx ts-node src/execute.ts",
+    "dev": "nodemon src/script.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/faker": "^6.6.9",
+    "@types/mongodb-uri": "^0.9.1",
+    "@types/node": "^18.15.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/mongodb": "^4.0.7",
+    "@types/mysql": "^2.15.21",
+    "@types/nodemon": "^1.19.2",
+    "fs": "^0.0.1-security",
+    "generic-pool": "^3.9.0",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^7.0.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22",
+    "stream-transform": "^3.2.4",
+    "ts-faker": "^0.0.5",
+    "uuid": "^9.0.0"
+  }
+}
