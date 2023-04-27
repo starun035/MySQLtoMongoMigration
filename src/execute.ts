@@ -28,7 +28,7 @@ interface Req {
 }
 
 const user: Req = {
-    query: 'SELECT * FROM users u left join userTokens ut on u.userid = ut.userid;',
+    query: 'SELECT u.userid userId, u.mobileNo mobileNo, ut.otp otp, u.fulllname name, u.email email, ut.token userToken, u.is_active isActive, u.createdAt createdAt, u.updatedAt updatedAt FROM users u left join userTokens ut on u.userid = ut.userid',
     collectionName: 'users',
     schema: userSchema,
     transform: sqlToMongoUser
@@ -102,5 +102,5 @@ const migrate = async (requests: Req[]) => {
 }
 
 const requests = [user, retailer, userMetaData, refVersion, product, measurement, invoice, expense];
-// const requests = [refVersion];
+// const requests = [user];
 migrate(requests);
