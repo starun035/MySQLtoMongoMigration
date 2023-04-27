@@ -28,7 +28,7 @@ interface Req {
 }
 
 const user: Req = {
-    query: 'select * from users',
+    query: 'SELECT * FROM users u left join userTokens ut on u.userid = ut.userid;',
     collectionName: 'users',
     schema: userSchema,
     transform: sqlToMongoUser
