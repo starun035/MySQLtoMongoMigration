@@ -101,6 +101,6 @@ const migrate = async (requests: Req[]) => {
     await disconnectMySql();
 }
 
-// const requests = [user, retailer, userMetaData, refVersion, product, measurement, invoice, expense];
-const requests = [refVersion];
+const requests = [user, retailer, userMetaData, refVersion, product, measurement, invoice, expense];
+// const requests = [refVersion];
 migrate(requests);
