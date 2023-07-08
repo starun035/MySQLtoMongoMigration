@@ -27,6 +27,7 @@ interface Req {
     transform: Function;
 }
 
+// these objects represents collections in mongoDB
 const user: Req = {
     query: 'SELECT u.userid userId, u.mobileNo mobileNo, ut.otp otp, u.fulllname name, u.email email, ut.token userToken, u.is_active isActive, u.createdAt createdAt, u.updatedAt updatedAt FROM users u left join userTokens ut on u.userid = ut.userid',
     collectionName: 'users',
